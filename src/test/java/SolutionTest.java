@@ -18,7 +18,16 @@ public class SolutionTest {
     private static final Logger logger = LogManager.getLogger(ResolverUtil.Test.class);
     private Catalog catalog;
 
-
+    /**
+     * this method receives as parameters some arrays
+     * each array contains the indexes of the items in the list, items that form a connected component
+     * each array is added to a new list
+     * the new list contains a playlist for n days, where n is the size of the new list
+     * eg: newList[i]=array, where array=playlist and i=number of the day
+     *
+     * @param indexItem some arrays
+     * @return a new list which represents the solution
+     */
     @SafeVarargs
     private final List<List<Integer>> getSolution(List<Integer>... indexItem) {
         return new ArrayList<>(Arrays.asList(indexItem));
